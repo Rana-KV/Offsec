@@ -14,9 +14,6 @@ const seconds = currentTime.getSeconds().toString().padStart(2, '0');
 // Construct the time string in your desired format (e.g., HH:MM:SS)
 const timeString = `${hours}:${minutes}:${seconds}`;
 
-// Set the specific cookie values
-document.cookie = ;
-
 // Define request headers
 const headers = {
   'Content-Type': 'application/x-www-form-urlencoded',
